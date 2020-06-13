@@ -9,12 +9,6 @@ pipeline {
                     }
             }
         }
-         stage('Build Test') {
-                    steps {
-                        withMaven(jdk: '', maven: 'Maven3.6'){
-                            sh 'Build TestING'
-                            }
-                    }
-                }
+
     }
 }
