@@ -4,7 +4,7 @@ pipeline {
         stage('Build Compilation') {
             steps {
                 withmaven(maven : 'maven_3_6_3'){
-                sh '/Users/nthumu/Downloads/apache-maven-3.6.3/bin clean install'
+                sh 'mvn clean install'
                 }
             }
         }
