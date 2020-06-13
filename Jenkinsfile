@@ -3,14 +3,15 @@ pipeline {
     stages {
         stage('Build Compilation') {
             steps {
-                withmaven(maven : 'maven_3_6_3'){
-                sh 'mvn clean install'
-                }
+                withMaven(jdk: '', maven: 'Maven3.6') {
+                  sh 'mvn clean install'
+
+                    }
             }
         }
          stage('Build Test') {
                     steps {
-                        withmaven(maven : 'maven_3_6_3'){
+                        withMaven(jdk: '', maven: 'Maven3.6'){
                             sh 'Build TestING'
                             }
                     }
